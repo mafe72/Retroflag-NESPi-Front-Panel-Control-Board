@@ -49,7 +49,7 @@ Software Installation
 
         (sleep 1; python /home/pi/RetroFlag/retroflag.py)&
 
- 4. Install required python libraries
+ 4. Install required python libraries:
 
         sudo apt-get update
 		sudo apt-get install python-dev python-pip python-gpiozero
