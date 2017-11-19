@@ -1,4 +1,3 @@
-===============================
 Retroflag NESPi Front Panel Control Board
 ===============================
 
