@@ -71,13 +71,18 @@ Basic Usage
 -----------
 
 * POWER ON
-	While powered off
-		Press (LATCH) POWER button
-		Wait for Raspberry Pi to boot
+			
+		While powered off
+			Press (LATCH) POWER button
+			Wait for Raspberry Pi to boot
+		
 * POWER OFF
-	While powered on
-		Press (Unlatch) POWER button
-		Wait for Raspberry Pi to shutdown
+		
+		While powered on
+			Press (Unlatch) POWER button
+			Wait for Raspberry Pi to shutdown
+			
 * RESET
-	Hold RESET button to reboot Pi
+		
+		Hold RESET button to reboot Pi
 	
