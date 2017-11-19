@@ -23,8 +23,8 @@ https://oshpark.com/shared_projects/V2yqoyFn
 Software Installation
 ---------------------
  1. Transfer the retroflag.py file to the Raspberry Pi in folder: 
- 
-    `~/home/pi/RetroFlag/retroflag.py 
+
+        `~/home/pi/RetroFlag/retroflag.py
 
  2. Update rc.local:
 
