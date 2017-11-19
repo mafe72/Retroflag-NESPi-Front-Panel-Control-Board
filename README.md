@@ -17,14 +17,19 @@ https://www.mouser.com/ProjectManager/ProjectDetail.aspx…
 PCB can be ordered from oshpark:
 https://oshpark.com/shared_projects/V2yqoyFn
 
-.. image:: RetroflagNESPi-TH_Back.png
-.. image:: RetroflagNESPi-TH_Front.png
+
+Bottom Side:
+![](RetroflagNESPi-TH_Back.png)
+
+Top Side
+![](RetroflagNESPi-TH_Front.png)
+
 
 Software Installation
 ---------------------
  1. Transfer the retroflag.py file to the Raspberry Pi in folder: 
 
-        `~/home/pi/RetroFlag/retroflag.py
+        ~/home/pi/RetroFlag/retroflag.py
 
  2. Update rc.local:
 
