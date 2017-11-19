@@ -1,6 +1,6 @@
 Retroflag NESPi Front Panel Control Board
 ===============================
-This is an enhancement boar for the Retro Flag NESPi that add missing functionality to the case.
+This is an enhancement board for the Retro Flag NESPi that add missing functionality to the case.
 
 
 License
@@ -74,14 +74,12 @@ Basic Usage
 			
 		While powered off
 			Press (LATCH) POWER button
-			Wait for Raspberry Pi to boot
-		
+			Wait for Raspberry Pi to boot		
 * POWER OFF
 		
 		While powered on
 			Press (Unlatch) POWER button
-			Wait for Raspberry Pi to shutdown
-			
+			Wait for Raspberry Pi to shutdown			
 * RESET
 		
 		Hold RESET button to reboot Pi
