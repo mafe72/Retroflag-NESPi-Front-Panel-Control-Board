@@ -21,11 +21,11 @@ Features
 
 
 Bottom Side:
-![](RetroflagNESPi-TH_Back.png)
+![CBottom Side](pictures/RetroflagNESPi-TH_Back.png)
+![]()
 
 Top Side
-![](RetroflagNESPi-TH_Front.png)
-
+![Top Side](pictures/RetroflagNESPi-TH_Front.png)
 
 Bill of Materials
 -----------------
