@@ -10,22 +10,14 @@ License
 This project is licensed under the Attribution-NonCommercial-ShareAlike CC BY-NC-SA 4.0 license. The full legal text of the license may be found in the LICENSE.txt file in this repository. For more information about this license, please visit 
 the Creative Commons Foundation (https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-
 Features
 --------
 
-* Safe shutdown Pi from power switch
+* Soft-shutdown Pi from power switch
 
 * Reboot Pi from reset switch
 
 * 2 wire fan control
-
-
-BOM can be ordered from mouser:
-https://www.mouser.com/ProjectManager/ProjectDetail.aspx…
-
-PCB can be ordered from oshpark:
-https://oshpark.com/shared_projects/V2yqoyFn
 
 
 Bottom Side:
@@ -33,6 +25,18 @@ Bottom Side:
 
 Top Side
 ![](RetroflagNESPi-TH_Front.png)
+
+
+Bill of Materials
+-----------------
+
+[Mouser shared BOM here](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=31b58a360e)
+
+
+Fabrication
+-----------
+
+[OSHPark shared project here](https://oshpark.com/shared_projects/V2yqoyFn)
 
 
 Software Installation
