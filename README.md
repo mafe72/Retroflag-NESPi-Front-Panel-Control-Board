@@ -1,6 +1,6 @@
 Retroflag NESPi Front Panel Control Board
 ===============================
-This is an enhancement board for the Retro Flag NESPi that add missing functionality to the case.
+This is an enhancement board for the RetroFlag NESPi case, this PCB add missing functionality to the system.
 
 
 License
