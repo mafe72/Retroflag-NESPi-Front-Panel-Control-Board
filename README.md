@@ -70,7 +70,7 @@ Software Installation
 It's very important to follow the right pin configuration to prevent damage to your Pi.
 If you haven't, see the Hardware Installation section.
 
-This instruction is a *step-by-step guide* to install necessary software for your **Retroflag NESPi Front Panel Control Board**.
+This instructions are a *step-by-step guide* to install necessary software for your **Retroflag NESPi Front Panel Control Board**.
 You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
 
 ----------
@@ -79,6 +79,7 @@ Open your terminal and type the one-line installation command below:
 ```bash
 $ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install.sh" | sudo bash
 ```
+
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **Retroflag NESPi Front Panel Control Board.**
 Installation will automatically reboot once all processes are completed.
 
