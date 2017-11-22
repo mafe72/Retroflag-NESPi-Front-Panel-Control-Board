@@ -68,7 +68,7 @@ It's very important to follow the right pin configuration to prevent damage to y
 Software Installation
 ---------------------
 
-**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports.
+**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports;
 If you haven't, see the Hardware Installation section.
 
 This instructions are a *step-by-step guide* to install necessary software for your **Retroflag NESPi Front Panel Control Board**.
