@@ -69,7 +69,7 @@ Software Installation
 ---------------------
 
 **NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports;
-If you haven't, see the Hardware Installation section.
+If you haven't, see the [Hardware Installation](#hardware-installation) section.
 
 This instructions are a *step-by-step guide* to install necessary software for your **Retroflag NESPi Front Panel Control Board**.
 You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
