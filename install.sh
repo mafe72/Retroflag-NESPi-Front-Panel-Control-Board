@@ -1,15 +1,12 @@
 #!/bin/bash
-
-#RetroFlag NESPi Control Board Setup Script
+#RetroFlag NESPi Control Board Install Script
 #by Eladio Martinez 11-22-2017
-
 #Step 1) Check if root--------------------------------------
 if [[ $EUID -ne 0 ]]; then
    echo "Please execute script as root." 
    exit 1
 fi
 #-----------------------------------------------------------
-
 #Step 2) enable UART----------------------------------------
 cd /boot/
 File=config.txt
@@ -21,15 +18,12 @@ if grep -q "enable_uart=1" "$File";
 		echo "UART enabled."
 fi
 #-----------------------------------------------------------
-
 #Step 3) Update repository----------------------------------
 sudo apt-get update -y
 #-----------------------------------------------------------
-
 #Step 4) Install gpiozero module----------------------------
 sudo apt-get install -y python3-gpiozero
 #-----------------------------------------------------------
-
 #Step 5) Download Python script-----------------------------
 cd /opt/
 sudo mkdir RetroFlag
@@ -42,7 +36,6 @@ if [ -e $script ];
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/retroflag.py"
 fi
 #-----------------------------------------------------------
-
 #Step 6) Enable Python script to run on start up------------
 cd /etc/
 RC=rc.local
@@ -54,7 +47,6 @@ if grep -q "sudo python3 \/opt\/RetroFlag\/retroflag.py \&" "$RC";
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
-
 #Step 7) Reboot to apply changes----------------------------
 echo "RRetroflag NESPi Front Panel Control Switch installation done. Will now reboot after 3 seconds."
 sleep 3
