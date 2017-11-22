@@ -47,11 +47,11 @@ Prerequisites
 
 2. Internet connection
 
-      Internet access via Ethernet or set up your internet via WiFi, you can follow instructions [here](https://retropie.org.uk/docs/Wifi/ "RetroPie WiFi Setup").
+      Internet access via Ethernet or to set up your internet via WiFi, you can follow the instructions [here](https://retropie.org.uk/docs/Wifi/ "RetroPie WiFi Setup").
 
 3. Keyboard and screen, or any computer/laptop (via SSH)
 
-      To access your Pi via SSH, you can also follow instructions [here](https://retropie.org.uk/docs/SSH/ "Raspberry Pi SSH Setup").
+      To access your Pi via SSH, you can also follow this instructions [here](https://retropie.org.uk/docs/SSH/ "Raspberry Pi SSH Setup").
 
 
 Hardware Installation
