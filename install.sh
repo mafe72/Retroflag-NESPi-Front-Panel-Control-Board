@@ -61,12 +61,3 @@ echo "Retroflag NESPi Front Panel Control Switch installation done. Will now reb
 sleep 3
 sudo reboot
 #-----------------------------------------------------------
-
-
-
-
-
-
-
-
-
