@@ -22,7 +22,7 @@ Features
 ----------
 Bottom Side:
 ![CBottom Side](pictures/RetroflagNESPi-TH_Back.png)
-----------
+
 Top Side
 ![Top Side](pictures/RetroflagNESPi-TH_Front.png)
 ----------
@@ -56,6 +56,7 @@ Prerequisites
 
 Hardware Installation
 ---------------------
+It's very important to follow the right pin configuration to prevent damage to your Pi.
 
   * `RST Pin` - Connect to GPIO 2 (RPI pin 3)
   * `PWR Pin` - Connect to GPIO 3 (RPI pin 5)
@@ -67,8 +68,7 @@ Hardware Installation
 Software Installation
 ---------------------
 
-(**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports.
-It's very important to follow the right pin configuration to prevent damage to your Pi.
+**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports.
 If you haven't, see the Hardware Installation section.
 
 This instructions are a *step-by-step guide* to install necessary software for your **Retroflag NESPi Front Panel Control Board**.
