@@ -26,6 +26,7 @@ sudo apt-get update -y
 
 #Step 4) Install gpiozero module----------------------------
 sudo apt-get install -y python3-gpiozero
+sudo pip install psutil pyserial
 #-----------------------------------------------------------
 
 #Step 5) Download Python script-----------------------------
