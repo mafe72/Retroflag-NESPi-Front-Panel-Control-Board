@@ -36,7 +36,7 @@ Bill of Materials
 Fabrication
 -----------
 
-[OSHPark shared project here](https://oshpark.com/shared_projects/V2yqoyFn)
+[OSHPark shared project here](https://oshpark.com/shared_projects/6rl8VzXl)
 
 Prerequisites
 ---------------------
