@@ -25,6 +25,10 @@ Bottom Side:
 
 Top Side
 ![Top Side](pictures/RetroflagNESPi-TH_Front.png)
+
+Power Board
+![Power Board](pictures/RetroflagNESPi-Power-SMD.png)
+
 ----------
 
 Bill of Materials
