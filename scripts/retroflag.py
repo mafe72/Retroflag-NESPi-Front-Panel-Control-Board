@@ -3,7 +3,7 @@
 #####################################
 # Hardware:
 # Board by Eladio Martinez
-# https://oshpark.com/shared_projects/V2yqoyFn
+# https://oshpark.com/shared_projects/ssSJDKKQ
 #
 # BOM
 # https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=31b58a360e
@@ -30,37 +30,50 @@
 #    While powered on
 #    Press (Unlatch) POWER button
 #    Wait for Raspberry Pi to shutdown
-#  RESET
-#    Hold RESET button to reboot Pi
+#
+# While playing a game:
+#  Press RESET 
+#    To reboot current game
+#  Hold RESET for 3 seconds
+#    To quit current game
 
-
-import os 
+import RPi.GPIO as GPIO
 import time
+import os
 import socket
 from gpiozero import Button, DigitalOutputDevice
 
-resetButton = Button(2)  #Connect RST Pin to GPIO 2 (RPI pin 3)
+resetButton = 2
+powerButton = Button(3)
+fan = DigitalOutputDevice(4)
+hold = 2
+rebootBtn = Button(resetButton, hold_time=hold)
 
-powerButton = Button(3)  #Connect PWR Pin to GPIO 3 (RPI pin 5)
-
-fan = DigitalOutputDevice(4)  #Connect FAN_CT to GPIO 4 (RPI pin 7)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(resetButton,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #Get CPU Temperature
 def getCPUtemp():
 	res = os.popen('vcgencmd measure_temp').readline()
 	return (res.replace("temp=","").replace("'C\n",""))
+	
+def retroPiCmd(message):
+	sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	sock.sendto(message, ("127.0.0.1", 55355))
 
-#Main worker loop
 while True:
 	#Power / LED Control
 	#When power button is unlatched turn off LED and initiate shutdown
 	if not powerButton.is_pressed:
 		os.system("sudo shutdown -h now")
+		
+	#RESET Button pressed
+	if rebootBtn.is_pressed:
+		retroPiCmd("RESET")
 
-	#RESET Button
-	if resetButton.is_pressed:
-		os.system("sudo reboot")
-	
+	if rebootBtn.is_held:
+		retroPiCmd("QUIT")
+
 	#Fan control
 	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
 	#on and off with only a one second loop
@@ -71,5 +84,4 @@ while True:
 		fan.on()
 	if cpuTemp < fanOffTemp:
 		fan.off()
-		
-	time.sleep(1)
+	time.sleep(0.50)
