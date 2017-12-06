@@ -108,6 +108,11 @@ Basic Usage
 			Press (Unlatch) POWER button
 			Wait for Raspberry Pi to shutdown			
 * RESET
-		
-		Hold RESET button to reboot Pi
+
+		While playing a game
+			Press RESET button to reboot current game
 	
+* RESET
+	
+		While playing a game
+			Hold RESET button for 3 seconds to quit game
