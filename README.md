@@ -68,6 +68,8 @@ It's very important to follow the right pin configuration to prevent damage to y
   * `OUT + Pin` - Connect to 5V (RPI pin 4)
   * `OUT - Pin` - Connect to GND (RPI pin 6)
   * `- IN + Pin` - Source 5v
+  
+![Pin Connection](pictures/Rpi-PinOut.png)
 
 Software Installation
 ---------------------
