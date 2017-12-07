@@ -64,11 +64,18 @@ fi
 cd /etc/
 RC=rc.local
 
+#Cleaning deprecated configration----
+if grep -q "sudo python3 \/opt\/RetroFlag\/retroflag.py \&" "$RC";
+        then
+               sed -i '/sudo python3 \/opt\/RetroFlag\/retroflag.py \&/c\' "$RC";
+fi
+
+#Adding new configuration----------- 
 if grep -q "sudo python \/opt\/RetroFlag\/retroflag.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python3 \/opt\/RetroFlag\/retroflag.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/retroflag.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
@@ -97,6 +104,6 @@ fi
 #-----------------------------------------------------------
 #Step 9) Reboot to apply changes----------------------------
 echo "Retroflag NESPi Front Panel Control Switch installation done. Will now reboot after 3 seconds."
-sleep 3
+sleep 4
 sudo reboot
 #-----------------------------------------------------------
