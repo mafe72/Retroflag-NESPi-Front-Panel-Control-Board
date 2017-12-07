@@ -39,7 +39,7 @@ sudo apt-get update -y
 #-----------------------------------------------------------
 
 #Step 4) Install gpiozero module----------------------------
-sudo apt-get install -y python3-gpiozero
+sudo apt-get install -y python-dev python-pip python-gpiozero
 sudo pip install psutil pyserial
 #-----------------------------------------------------------
 
@@ -64,7 +64,7 @@ fi
 cd /etc/
 RC=rc.local
 
-if grep -q "sudo python3 \/opt\/RetroFlag\/retroflag.py \&" "$RC";
+if grep -q "sudo python \/opt\/RetroFlag\/retroflag.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
