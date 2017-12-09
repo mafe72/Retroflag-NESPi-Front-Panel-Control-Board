@@ -71,6 +71,7 @@ It's very important to follow the right pin configuration to prevent damage to y
   * `- IN + Pin` - Source 5v
   
 ![Pin Connection](pictures/Rpi-PinOut.png)
+
 `Note: LED pin is only available on PCB V_12062017 and up`
 
 Software Installation
