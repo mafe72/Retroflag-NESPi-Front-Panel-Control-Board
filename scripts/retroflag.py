@@ -25,27 +25,32 @@
 #  POWER ON
 #    While powered off
 #    Press (LATCH) POWER button
+#	 LED will turn ON
 #    Wait for Raspberry Pi to boot
 #  POWER OFF
 #    While powered on
 #    Press (Unlatch) POWER button
+#	 LED will turn OFF
 #    Wait for Raspberry Pi to shutdown
 #
 # While playing a game:
 #  Press RESET 
 #    To reboot current game
+#	 No change on LED status
 #  Hold RESET for 3 seconds
 #    To quit current game
+#	 LED will BLINK
 
 import RPi.GPIO as GPIO
 import time
 import os
 import socket
-from gpiozero import Button, DigitalOutputDevice
+from gpiozero import Button, DigitalOutputDevice, LED
 
 resetButton = 2
 powerButton = Button(3)
 fan = DigitalOutputDevice(4)
+led = LED(14)
 hold = 2
 rebootBtn = Button(resetButton, hold_time=hold)
 
@@ -66,12 +71,19 @@ while True:
 	#When power button is unlatched turn off LED and initiate shutdown
 	if not powerButton.is_pressed:
 		os.system("sudo shutdown -h now")
+		break
+	else:
+		led.on()  #Take control of LED instead of relying on TX pin
 		
 	#RESET Button pressed
+	#When Reset button is presed restart current game
 	if rebootBtn.is_pressed:
 		retroPiCmd("RESET")
 
+	#RESET Button held
+	#When Reset button is held for more then 3 sec quit current game
 	if rebootBtn.is_held:
+		led.blink(.2,.2)
 		retroPiCmd("QUIT")
 
 	#Fan control
