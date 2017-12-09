@@ -65,6 +65,7 @@ It's very important to follow the right pin configuration to prevent damage to y
   * `RST Pin` - Connect to GPIO 2 (RPI pin 3)
   * `PWR Pin` - Connect to GPIO 3 (RPI pin 5)
   * `FAN_CT Pin` - Connect to GPIO 4 (RPI pin 7)
+  * `LED` - Connect to GPIO 14 (RPI pin 8)
   * `OUT + Pin` - Connect to 5V (RPI pin 4)
   * `OUT - Pin` - Connect to GND (RPI pin 6)
   * `- IN + Pin` - Source 5v
@@ -101,18 +102,22 @@ Basic Usage
 			
 		While powered off
 			Press (LATCH) POWER button
+			LED will turn ON
 			Wait for Raspberry Pi to boot		
 * POWER OFF
 		
 		While powered on
 			Press (Unlatch) POWER button
+			LED will turn OFF
 			Wait for Raspberry Pi to shutdown			
 * RESET
 
 		While playing a game
 			Press RESET button to reboot current game
+			No change on LED status
 	
 * RESET
 	
 		While playing a game
 			Hold RESET button for 3 seconds to quit game
+			LED will BLINK
