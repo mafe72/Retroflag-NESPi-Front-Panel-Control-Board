@@ -65,12 +65,13 @@ It's very important to follow the right pin configuration to prevent damage to y
   * `RST Pin` - Connect to GPIO 2 (RPI pin 3)
   * `PWR Pin` - Connect to GPIO 3 (RPI pin 5)
   * `FAN_CT Pin` - Connect to GPIO 4 (RPI pin 7)
-  * `LED` - Connect to GPIO 14 (RPI pin 8)
+  * `LED` - Connect to GPIO 14 (RPI pin 8) 
   * `OUT + Pin` - Connect to 5V (RPI pin 4)
   * `OUT - Pin` - Connect to GND (RPI pin 6)
   * `- IN + Pin` - Source 5v
   
 ![Pin Connection](pictures/Rpi-PinOut.png)
+`Note: LED pin is only available on PCB V_12062017 and up`
 
 Software Installation
 ---------------------
