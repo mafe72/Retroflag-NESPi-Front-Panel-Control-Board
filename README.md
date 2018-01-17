@@ -19,17 +19,17 @@ Features
 
 * 2 wire fan control
 
-* You can buy the latest version of this board fully assembled from [http://mini-mods.com] (http://mini-mods.com)
+* You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com)
 
 ----------
 Bottom Side:
-![CBottom Side](pictures/NESPi-TH_Back.png)
+![Bottom Side](pictures/nespi_th_back.png)
 
 Top Side
-![Top Side](pictures/NESPi-TH_Front.png)
+![Top Side](pictures/nespi_th_front.png)
 
 Power Board
-![Power Board](pictures/NESPi-Power-SMD.png)
+![Power Board](pictures/nespi_power-smd.png)
 
 ----------
 
@@ -72,7 +72,7 @@ It's very important to follow the right pin configuration to prevent damage to y
   * `OUT - Pin` - Connect to GND (RPI pin 6)
   * `- IN + Pin` - Source 5v
   
-![Pin Connection](pictures/RpiPinOut.png)
+![Pin Connection](pictures/rpi_pinout.png)
 
 `Note: LED_CT pin is only available on PCB V_12062017 and up.`
 
