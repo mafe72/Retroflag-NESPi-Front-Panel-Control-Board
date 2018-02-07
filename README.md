@@ -23,7 +23,7 @@ Features
 
 * One-line script installation
 
-* You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com)
+* You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-control-board/)
 
 ----------
 Bottom Side:
