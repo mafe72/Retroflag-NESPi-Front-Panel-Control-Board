@@ -19,6 +19,8 @@ Features
 
 * 2 wire fan control
 
+* One-line script installation
+
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com)
 
 ----------
