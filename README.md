@@ -17,6 +17,8 @@ Features
 
 * Reboot Pi from reset switch
 
+* Easy Temperature Control
+
 * 2 wire fan control
 
 * One-line script installation
