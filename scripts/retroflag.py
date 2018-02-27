@@ -70,6 +70,7 @@ while True:
 	#Power / LED Control
 	#When power button is unlatched turn off LED and initiate shutdown
 	if not powerButton.is_pressed:
+		print("Shutting down...")
 		os.system("sudo shutdown -h now")
 		break
 	else:
@@ -96,4 +97,4 @@ while True:
 		fan.on()
 	if cpuTemp < fanOffTemp:
 		fan.off()
-	time.sleep(0.50)
+	time.sleep(1.00)
