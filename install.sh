@@ -34,10 +34,10 @@ if grep -q "disable_splash=1" "$File";
 fi
 if grep -q "avoid_warnings=1" "$File";
         then
-                echo "undervoltage/overheating warnings already disable. Doing nothing."
+                echo "warnings already disable. Doing nothing."
         else
                 echo "avoid_warnings=1" >> "$File"
-                echo "undervoltage/overheating warnings disable."
+                echo "warnings disable."
 fi
 #-----------------------------------------------------------
 
