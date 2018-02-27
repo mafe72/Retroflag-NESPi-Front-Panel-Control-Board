@@ -32,6 +32,13 @@ if grep -q "disable_splash=1" "$File";
 		echo "disable_splash=1" >> "$File"
 		echo "splash screen disable."
 fi
+if grep -q "avoid_warnings=1" "$File";
+        then
+                echo "undervoltage/overheating warnings already disable. Doing nothing."
+        else
+                echo "disable_splash=1" >> "$File"
+                echo "undervoltage/overheating warnings disable."
+fi
 #-----------------------------------------------------------
 
 #Step 3) Update repository----------------------------------
