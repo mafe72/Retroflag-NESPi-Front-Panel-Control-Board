@@ -81,6 +81,7 @@ if [ -e $script ];
 	else
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
                 wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
+                echo "Download complete."
 fi
 #-----------------------------------------------------------
 
