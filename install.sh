@@ -50,6 +50,11 @@ sudo apt-get install -y python-dev python-pip python-gpiozero
 sudo pip install psutil pyserial
 #-----------------------------------------------------------
 
+##Remove downloaded package files in order to free up space-
+echo Remove downloaded package files
+sudo apt-get clean
+#-----------------------------------------------------------
+
 #Step 5) Download Python script-----------------------------
 cd /opt/
 sudo mkdir RetroFlag
