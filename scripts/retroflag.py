@@ -54,7 +54,7 @@ led = LED(14)
 hold = 2
 rebootBtn = Button(resetButton, hold_time=hold)
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM) # use GPIO numbering
 GPIO.setup(resetButton,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #Get CPU Temperature
@@ -70,8 +70,9 @@ while True:
 	#Power / LED Control
 	#When power button is unlatched turn off LED and initiate shutdown
 	if not powerButton.is_pressed:
-		print("Shutting down...")
-		os.system("sudo shutdown -h now")
+		print ("Shutting down...")
+		os.system("omxplayer -o hdmi /opt/RetroFlag/tone.mp3")
+		os.system("shutdown -h now")
 		break
 	else:
 		led.on()  #Take control of LED instead of relying on TX pin
