@@ -59,19 +59,21 @@ sudo apt-get clean
 cd /opt/
 sudo mkdir RetroFlag
 cd /opt/RetroFlag
-script=retroflag.py
+oldscript=retroflag.py
+script=shutdown-retroflag.py
 tone=tone.mp3
 
 if [ -e $script ];
 	then
 		echo "Script retroflag.py already exists. Updating..."
-		rm $script
+		rm $oldscript
+                rm $script
 		rm $tone
-		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/retroflag.py"
+		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
 		echo "Update complete."
 	else
-		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/retroflag.py"
+		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
                 wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
 fi
 #-----------------------------------------------------------
@@ -80,18 +82,25 @@ fi
 cd /etc/
 RC=rc.local
 
-#Cleaning deprecated configration----
+#Cleaning deprecated configration files --------------------
+echo Cleaning deprecated configration files from rc.local
 if grep -q "sudo python3 \/opt\/RetroFlag\/retroflag.py \&" "$RC";
         then
                sed -i '/sudo python3 \/opt\/RetroFlag\/retroflag.py \&/c\' "$RC";
 fi
 
-#Adding new configuration----------- 
 if grep -q "sudo python \/opt\/RetroFlag\/retroflag.py \&" "$RC";
+        then
+               sed -i '/sudo python \/opt\/RetroFlag\/retroflag.py \&/c\' "$RC";
+fi
+
+#Adding new configuration-----------------------------------
+echo Adding new configuration files to rc.local 
+if grep -q "sudo python \/opt\/RetroFlag\/shutdown-retroflag.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/retroflag.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/shutdown-retroflag.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
