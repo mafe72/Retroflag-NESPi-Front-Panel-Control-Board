@@ -55,15 +55,19 @@ cd /opt/
 sudo mkdir RetroFlag
 cd /opt/RetroFlag
 script=retroflag.py
+tone=tone.mp3
 
 if [ -e $script ];
 	then
 		echo "Script retroflag.py already exists. Updating..."
 		rm $script
+		rm $tone
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/retroflag.py"
+		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
 		echo "Update complete."
 	else
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/retroflag.py"
+                wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
 fi
 #-----------------------------------------------------------
 
