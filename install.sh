@@ -64,9 +64,15 @@ script=shutdown-retroflag.py
 tone=tone.mp3
 
 if [ -e $script ];
+        then
+                echo "Deleting old retroflag.py script..."
+                rm $oldscript
+                rm $tone
+fi
+
+if [ -e $script ];
 	then
-		echo "Script retroflag.py already exists. Updating..."
-		rm $oldscript
+		echo "Script shutdown-retroflag.py already exists. Updating..."
                 rm $script
 		rm $tone
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
