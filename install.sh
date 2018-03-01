@@ -109,8 +109,10 @@ if grep -q 'network_cmd_enable = "true"' "$rac";
 fi
 if grep -q 'network_cmd_port = "55355"' "$rac";
 	then
+                echo "network port 55355 alredy enabled. Doing nothing."
+        else
 		sed -i '/network_cmd_port = "55355"/c\network_cmd_port = "55355"' "$rac"
-		echo "network cmd alredy enabled. Doing nothing."
+		echo "network port 55355 enabled."
 fi
 #-----------------------------------------------------------
 #Step 9) Reboot to apply changes----------------------------
