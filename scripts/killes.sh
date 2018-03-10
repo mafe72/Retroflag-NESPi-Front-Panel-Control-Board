@@ -17,4 +17,4 @@ fi
 
 kill "$espid"
 wait "$espid"
-sleep 5
+sleep 3
