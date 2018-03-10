@@ -21,11 +21,17 @@ Features
 
 * 2 wire fan control
 
+* Gracefully finish EmulationStation, letting it save all metadata, in every system shutdown. 
+
 * One-line script installation
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-control-board/)
 
 ----------
+
+Latest Version 1 PCB
+--------
+
 Bottom Side:
 ![Bottom Side](pictures/nespi_th_back.png)
 
@@ -36,17 +42,6 @@ Power Board
 ![Power Board](pictures/nespi_power-smd.png)
 
 ----------
-
-Bill of Materials
------------------
-
-[Mouser shared BOM here](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=31b58a360e)
-
-
-Fabrication
------------
-
-[OSHPark shared project here](https://oshpark.com/shared_projects/ssSJDKKQ)
 
 Prerequisites
 ---------------------
