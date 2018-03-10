@@ -82,7 +82,7 @@ if [ -e $script ];
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
                 wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/killes.sh"
-		chmod a+x /etc/killes.sh
+		chmod a+x killes.sh
 		echo "Updating Kill ES Service...."
 		cd /etc/systemd/system/
 		sudo systemctl disable killes
@@ -94,7 +94,7 @@ if [ -e $script ];
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
                 wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
                 wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/killes.sh"
-                chmod a+x /etc/killes.sh
+                chmod a+x killes.sh
 		echo "Updating Kill ES Service...."
                 cd /etc/systemd/system/
                 wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/killes.service"
