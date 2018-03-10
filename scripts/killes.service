@@ -1,0 +1,11 @@
+[Unit]
+Description=Kill EmulationStation
+After=autologin@tty1.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/opt/RetroFlag/killes.sh
+
+[Install]
+WantedBy=multi-user.target
