@@ -48,6 +48,7 @@ sudo apt-get update -y
 #Step 4) Install gpiozero module----------------------------
 sudo apt-get install -y python-dev python-pip python-gpiozero
 sudo pip install psutil pyserial
+sudo apt - get install wiringpi
 #-----------------------------------------------------------
 
 ##Remove downloaded package files in order to free up space-
@@ -62,26 +63,43 @@ cd /opt/RetroFlag
 oldscript=retroflag.py
 script=shutdown-retroflag.py
 tone=tone.mp3
+killes=killes.sh
+killse=killes.service
 
 if [ -e $script ];
         then
                 echo "Deleting old retroflag.py script..."
-                rm $oldscript
-                rm $tone
+                rm -r $oldscript
+                rm -r $tone
 fi
 
 if [ -e $script ];
 	then
 		echo "Script shutdown-retroflag.py already exists. Updating..."
-                rm $script
-		rm $tone
+                rm -r $script
+		rm -r $tone
+		rm -r $killes
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
+                wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/killes.sh"
+		chmod a+x /etc/killes.sh
+		echo "Updating Kill ES Service...."
+		cd /etc/systemd/system/
+		sudo systemctl disable killes
+		rm -r $killse
+		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/killes.service"
+		sudo systemctl enable killes
 		echo "Update complete."
 	else
 		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/shutdown-retroflag.py"
                 wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/tone.mp3"
-                echo "Download complete."
+                wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/killes.sh"
+                chmod a+x /etc/killes.sh
+		echo "Updating Kill ES Service...."
+                cd /etc/systemd/system/
+                wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/master/scripts/killes.service"
+		sudo systemctl enable killes
+		echo "Download complete."
 fi
 #-----------------------------------------------------------
 

@@ -1,12 +1,8 @@
 #####################################
 # RetroFlag NESPi Control Board Script
 #####################################
-# Hardware:
-# Board by Eladio Martinez
-# https://oshpark.com/shared_projects/ssSJDKKQ
-#
-# BOM
-# https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=31b58a360e
+# Script:
+# By Eladio Martinez
 #
 #####################################
 # Wiring:
@@ -70,8 +66,10 @@ while True:
 	#Power / LED Control
 	#When power button is unlatched turn off LED and initiate shutdown
 	if not powerButton.is_pressed:
+		print ("Gracefully finishing EmulationStation...")
+		os.system("/bin/bash /opt/RetroFlag/killes.sh")
+                os.system("omxplayer -o hdmi /opt/RetroFlag/tone.mp3")
 		print ("Shutting down...")
-		os.system("omxplayer -o hdmi /opt/RetroFlag/tone.mp3")
 		os.system("shutdown -h now")
 		break
 	else:
