@@ -32,6 +32,10 @@ if grep -q "disable_splash=1" "$File";
 		echo "disable_splash=1" >> "$File"
 		echo "splash screen disable."
 fi
+if grep -q "avoid_warnings=0" "$File";
+        then
+                sed -i '/avoid_warnings=0/d' "$File";
+fi
 if grep -q "avoid_warnings=1" "$File";
         then
                 echo "warnings already disable. Doing nothing."
