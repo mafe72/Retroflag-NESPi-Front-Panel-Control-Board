@@ -10,6 +10,10 @@ fi
 #Step 2) enable UART----------------------------------------
 cd /boot/
 File=config.txt
+if grep -q "#enable_uart=1" "$File";
+        then
+                sed -i '/#enable_uart=1/d' "$File";
+fi
 if grep -q "enable_uart=1" "$File";
 	then
 		echo "UART already enabled. Doing nothing."
@@ -18,6 +22,10 @@ if grep -q "enable_uart=1" "$File";
 		echo "UART enabled."
 fi
 # Enable additional settings-------------------------------
+if grep -q "#hdmi_drive=2" "$File";
+        then
+                sed -i '/#hdmi_drive=2/d' "$File";
+fi
 if grep -q "hdmi_drive=2" "$File";
 	then
 		echo "HDMI Sound already enabled. Doing nothing."
@@ -25,6 +33,11 @@ if grep -q "hdmi_drive=2" "$File";
 		echo "hdmi_drive=2" >> "$File"
 		echo "HDMI Sound enabled."
 fi
+if grep -q "#avoid_warnings=1" "$File";
+        then
+                sed -i '/#avoid_warnings=1/d' "$File";
+fi
+
 if grep -q "disable_splash=1" "$File";
 	then
 		echo "splash screen already disable. Doing nothing."
