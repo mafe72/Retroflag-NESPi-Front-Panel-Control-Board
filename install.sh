@@ -52,7 +52,7 @@ sudo apt-get update -y
 #Step 4) Install gpiozero module----------------------------
 sudo apt-get install -y python-dev python-pip python-gpiozero
 sudo pip install psutil pyserial
-sudo apt - get install wiringpi
+sudo apt-get install wiringpi
 #-----------------------------------------------------------
 
 ##Remove downloaded package files in order to free up space-
