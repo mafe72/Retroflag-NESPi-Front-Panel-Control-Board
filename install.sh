@@ -12,7 +12,7 @@ cd /boot/
 File=config.txt
 if grep -q "#enable_uart=1" "$File";
         then
-                sed -i '/#enable_uart=1/d' "$File";
+                sed -i '/#enable_uart=1/c\enable_uart=1' "$File"
 fi
 if grep -q "enable_uart=1" "$File";
 	then
@@ -24,7 +24,7 @@ fi
 # Enable additional settings-------------------------------
 if grep -q "#hdmi_drive=2" "$File";
         then
-                sed -i '/#hdmi_drive=2/d' "$File";
+                sed -i '/#hdmi_drive=2/c\hdmi_drive=2' "$File";
 fi
 if grep -q "hdmi_drive=2" "$File";
 	then
@@ -33,9 +33,9 @@ if grep -q "hdmi_drive=2" "$File";
 		echo "hdmi_drive=2" >> "$File"
 		echo "HDMI Sound enabled."
 fi
-if grep -q "#avoid_warnings=1" "$File";
+if grep -q "#disable_splash=1" "$File";
         then
-                sed -i '/#avoid_warnings=1/d' "$File";
+                sed -i '/#disable_splash=1/c\disable_splash=1' "$File";
 fi
 
 if grep -q "disable_splash=1" "$File";
@@ -45,13 +45,13 @@ if grep -q "disable_splash=1" "$File";
 		echo "disable_splash=1" >> "$File"
 		echo "splash screen disable."
 fi
-if grep -q "avoid_warnings=0" "$File";
-        then
-                sed -i '/avoid_warnings=0/d' "$File";
-fi
 if grep -q "#avoid_warnings=1" "$File";
         then
-                sed -i '/#avoid_warnings=1/d' "$File";
+                sed -i '/#avoid_warnings=1/c\avoid_warnings=1' "$File";
+fi
+if grep -q "avoid_warnings=0" "$File";
+        then
+                sed -i '/avoid_warnings=0/c\avoid_warnings=1' "$File";
 fi
 if grep -q "avoid_warnings=1" "$File";
         then
