@@ -36,6 +36,10 @@ if grep -q "avoid_warnings=0" "$File";
         then
                 sed -i '/avoid_warnings=0/d' "$File";
 fi
+if grep -q "#avoid_warnings=1" "$File";
+        then
+                sed -i '/#avoid_warnings=1/d' "$File";
+fi
 if grep -q "avoid_warnings=1" "$File";
         then
                 echo "warnings already disable. Doing nothing."
