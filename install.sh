@@ -138,21 +138,21 @@ cd /opt/retropie/configs/all/
 rac=retroarch.cfg
 if grep -q 'config_save_on_exit = "true"' "$rac";
 	then
-		echo "save on exit alredy enabled. Doing nothing."
+		echo "save on exit already enabled. Doing nothing."
 	else
 		sed -i '/config_save_on_exit = "false"/c\config_save_on_exit = "true"' "$rac"
 		echo "save on exit enabled."
 fi
 if grep -q 'network_cmd_enable = "true"' "$rac";
 	then
-		echo "network cmd alredy enabled. Doing nothing."
+		echo "network cmd already enabled. Doing nothing."
 	else
 		sed -i '/network_cmd_enable = "false"/c\network_cmd_enable = "true"' "$rac"
 		echo "network cmd enabled."
 fi
 if grep -q 'network_cmd_port = "55355"' "$rac";
 	then
-                echo "network port 55355 alredy enabled. Doing nothing."
+                echo "network port 55355 already enabled. Doing nothing."
         else
 		sed -i '/network_cmd_port = "55355"/c\network_cmd_port = "55355"' "$rac"
 		echo "network port 55355 enabled."
