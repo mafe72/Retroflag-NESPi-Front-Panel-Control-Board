@@ -47,17 +47,25 @@ if grep -q "disable_splash=1" "$File";
 fi
 if grep -q "#avoid_warnings=1" "$File";
         then
-                sed -i '/#avoid_warnings=1/c\avoid_warnings=1' "$File";
-fi
-if grep -q "avoid_warnings=0" "$File";
-        then
-                sed -i '/avoid_warnings=0/c\avoid_warnings=1' "$File";
+                sed -i '/#avoid_warnings=1/c\avoid_warnings=2' "$File";
 fi
 if grep -q "avoid_warnings=1" "$File";
         then
+                sed -i '/avoid_warnings=1/c\avoid_warnings=2' "$File";
+fi
+if grep -q "avoid_warnings=0" "$File";
+        then
+                sed -i '/avoid_warnings=0/c\avoid_warnings=2' "$File";
+fi
+if grep -q "#avoid_warnings=2" "$File";
+        then
+                sed -i '/#avoid_warnings=2/c\avoid_warnings=2' "$File";
+fi
+if grep -q "avoid_warnings=2" "$File";
+        then
                 echo "warnings already disable. Doing nothing."
         else
-                echo "avoid_warnings=1" >> "$File"
+                echo "avoid_warnings=2" >> "$File"
                 echo "warnings disable."
 fi
 #-----------------------------------------------------------
