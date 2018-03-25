@@ -110,7 +110,7 @@ $ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board
 ```
 
 The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **Retroflag NESPi Front Panel Control Board.**
-The uninstall script will automatically reboot once all processes is completed.
+The uninstall script will automatically reboot once all processes are completed.
 
 After rebooting, your **Retroflag NESPi Front Panel Control Board** will be fully deactivated.
 
