@@ -1,14 +1,16 @@
 #####################################
 # RetroFlag NESPi Control Board Script
 #####################################
-# Script:
-# By Eladio Martinez
+# Hardware:
+# Board by Eladio Martinez
+# http://mini-mods.com
 #
 #####################################
 # Wiring:
 #  GPIO 2  Reset Button (INPUT)
 #  GPIO 3  Power Button (INPUT)
 #  GPIO 4  Fan on signal (OUTPUT)
+#  GPIO 14 LED on signal (OUTPUT)
 #
 #####################################
 #  Required python libraries
@@ -41,16 +43,19 @@ import RPi.GPIO as GPIO
 import time
 import os
 import socket
-from gpiozero import Button, DigitalOutputDevice, LED
+from gpiozero import Button, LED
+GPIO.setmode(GPIO.BCM)
 
 resetButton = 2
 powerButton = Button(3)
-fan = DigitalOutputDevice(4)
+
+GPIO.setup(4, GPIO.OUT)
+fan = GPIO.PWM(4, 50) #PWM frequency set to 50Hz
+
 led = LED(14)
 hold = 2
-rebootBtn = Button(resetButton, hold_time=hold)
 
-GPIO.setmode(GPIO.BCM) # use GPIO numbering
+rebootBtn = Button(resetButton, hold_time=hold)
 GPIO.setup(resetButton,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #Get CPU Temperature
@@ -93,7 +98,7 @@ while True:
 	fanOnTemp = 55  #Turn on fan when exceeded
 	fanOffTemp = 40  #Turn off fan when under
 	if cpuTemp >= fanOnTemp:
-		fan.on()
+		fan.start(40) #40% duty cycle
 	if cpuTemp < fanOffTemp:
-		fan.off()
+		fan.stop()
 	time.sleep(1.00)
