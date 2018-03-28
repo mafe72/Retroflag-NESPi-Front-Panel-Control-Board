@@ -18,6 +18,18 @@ cd /etc/systemd/system/
 sudo systemctl disable killes
 rm -r $killse
 
+cd /boot/
+File=config.txt
+
+if grep -q "avoid_warnings=2" "$File";
+        then
+        	 sed -i '/avoid_warnings=2 \&/c\' "$File";
+fi
+if grep -q "avoid_warnings=1" "$File";
+        then
+                 sed -i '/avoid_warnings=1 \&/c\' "$File";
+fi
+
 #-----------------------------------------------------------
 
 #Step 3) Remove configuration script ------------
