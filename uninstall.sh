@@ -23,11 +23,12 @@ File=config.txt
 
 if grep -q "avoid_warnings=2" "$File";
         then
-        	 sed -i '/avoid_warnings=2 \&/c\' "$File";
+		sed -i '/avoid_warnings=2/c\#avoid_warnings=2' "$File";
+
 fi
 if grep -q "avoid_warnings=1" "$File";
         then
-                 sed -i '/avoid_warnings=1 \&/c\' "$File";
+		sed -i '/avoid_warnings=1/c\#avoid_warnings=1' "$File";
 fi
 
 #-----------------------------------------------------------
