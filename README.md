@@ -107,7 +107,7 @@ $ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board
 
 Open your terminal and type the one-line installation command below:
 ```bash
-$ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install_adv.sh" | sudo bash
+$ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install-adv.sh" | sudo bash
 ```
 
 ----------
