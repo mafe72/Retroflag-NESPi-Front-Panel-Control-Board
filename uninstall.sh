@@ -21,11 +21,6 @@ rm -r $killse
 cd /boot/
 File=config.txt
 
-if grep -q "avoid_warnings=2" "$File";
-        then
-		sed -i '/avoid_warnings=2/c\' "$File";
-
-fi
 if grep -q "avoid_warnings=1" "$File";
         then
 		sed -i '/avoid_warnings=1/c\' "$File";
@@ -37,7 +32,7 @@ fi
 cd /etc/
 RC=rc.local
 
-#Cleaning deprecated configration files --------------------
+#Cleaning rc.local configration files --------------------
 echo Cleaning configration files from rc.local
 if grep -q "sudo python3 \/opt\/RetroFlag\/retroflag.py \&" "$RC";
         then
@@ -54,9 +49,14 @@ if grep -q "sudo python \/opt\/RetroFlag\/shutdown-retroflag.py \&" "$RC";
                sed -i '/sudo python \/opt\/RetroFlag\/shutdown-retroflag.py \&/c\' "$RC";
 fi
 
+if grep -q "sudo python \/opt\/RetroFlag\/shutdown-nespi.py \&" "$RC";
+        then
+               sed -i '/sudo python \/opt\/RetroFlag\/shutdown-nespi.py \&/c\' "$RC";
+fi
+
 #-----------------------------------------------------------
 #Step 4) Reboot to apply changes----------------------------
-echo "Retroflag NESPi Front Panel Control Switch un-install complete. Will now reboot after 3 seconds."
+echo "Retroflag NESPi Front Panel Control Switch un-install complete. Will now shutdown after 3 seconds."
 sleep 4
-sudo reboot
+sudo shutdown -h now
 #-----------------------------------------------------------
