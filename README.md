@@ -152,7 +152,8 @@ Basic Usage
 		While powered on
 			Press (Unlatch) POWER button
 			LED will turn OFF
-			Wait for Raspberry Pi to shutdown			
+			Wait for Raspberry Pi to shutdown	
+			Power will be disconnected from the Raspberry Pi after each shutdown (advance only)
 * RESET
 
 		While playing a game
