@@ -23,7 +23,7 @@ Features
 
 * 2 wire fan control
 
-* Gracefully finish EmulationStation, letting it save all metadata, in every system shutdown. 
+* Gracefully finish EmulationStation, letting it save all metadata, in every system shutdown
 
 * Fully compatible with Raspbian-RetroPie Pre-made images
 
