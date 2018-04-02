@@ -163,5 +163,5 @@ Basic Usage
 * RESET
 	
 		While playing a game
-			Hold RESET button for 3 seconds to quit game
+			Hold RESET button for 3 seconds to quit game back to EmulationStation
 			LED will BLINK
