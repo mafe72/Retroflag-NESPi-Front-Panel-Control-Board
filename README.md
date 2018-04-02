@@ -110,6 +110,7 @@ Open your terminal and type the one-line installation command below:
 $ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install_adv.sh" | sudo bash
 ```
 
+----------
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **Retroflag NESPi Front Panel Control Board.**
 Installation will automatically reboot once all processes are completed.
 
