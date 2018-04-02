@@ -15,6 +15,8 @@ Features
 
 * Soft-shutdown Pi from power switch
 
+* Disconnect the power from the Raspberry Pi after each shutdown (advance only)
+
 * Reboot Pi from reset switch
 
 * Easy Temperature Control
@@ -29,7 +31,7 @@ Features
 
 ----------
 
-Latest Version 1
+NESPi Control Board
 --------
 
 Bottom Side:
@@ -38,8 +40,16 @@ Bottom Side:
 Top Side
 ![Top Side](pictures/nespi_th_front.png)
 
-Power Board
-![Power Board](pictures/nespi_power-smd.png)
+----------
+
+NESPi Advance Control Board
+--------
+
+Bottom Side:
+![Bottom Side](pictures/nespi_th_back_adv.png)
+
+Top Side
+![Top Side](pictures/nespi_th_front_adv.png)
 
 ----------
 
@@ -85,11 +95,19 @@ This instructions are a *step-by-step guide* to install necessary software for y
 You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
 
 ----------
+NESPi Control Board
 
 Open your terminal and type the one-line installation command below:
 ```bash
 $ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install.sh" | sudo bash
 ```
+
+----------
+NESPi Advance Control Board
+
+Open your terminal and type the one-line installation command below:
+```bash
+$ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install_adv.sh" | sudo bash
 
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **Retroflag NESPi Front Panel Control Board.**
 Installation will automatically reboot once all processes are completed.
