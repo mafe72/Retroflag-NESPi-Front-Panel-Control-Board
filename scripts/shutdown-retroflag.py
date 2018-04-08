@@ -98,7 +98,7 @@ while True:
 	fanOnTemp = 55  #Turn on fan when exceeded
 	fanOffTemp = 40  #Turn off fan when under
 	if cpuTemp >= fanOnTemp:
-		fan.start(60) #60% duty cycle
+		fan.start(90) #90% duty cycle
 	if cpuTemp < fanOffTemp:
 		fan.stop()
 	time.sleep(1.00)
