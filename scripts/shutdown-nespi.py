@@ -100,10 +100,10 @@ while True:
 	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
 	#on and off with only a one second loop
 	cpuTemp = int(float(getCPUtemp()))
-	fanOnTemp = 25  #Turn on fan when exceeded
-	fanOffTemp = 10  #Turn off fan when under
+	fanOnTemp = 55  #Turn on fan when exceeded
+	fanOffTemp = 40  #Turn off fan when under
 	if cpuTemp >= fanOnTemp:
-		fan.start(60) #60% duty cycle
+		fan.start(90) #90% duty cycle
 	if cpuTemp < fanOffTemp:
 		fan.stop()
-	time.sleep(1.00)
+time.sleep(1.00)
