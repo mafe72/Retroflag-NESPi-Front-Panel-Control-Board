@@ -17,7 +17,7 @@ Features
 
 * Disconnect the power from the Raspberry Pi after each shutdown (advance only)
 
-* Reboot Pi from reset switch
+* Custom Reset button functionality (see [Basic Usage](#basic-usage))
 
 * Easy Temperature Control
 
@@ -29,7 +29,7 @@ Features
 
 * One-line script installation
 
-* You can buy the latest version of this board fully assembled from [http://mini-mods.com](https://mini-mods.com/product/retroflag-control-and-power-boards/)
+* You can buy the latest version of this board fully assembled from [https://mini-mods.com](https://mini-mods.com/)
 
 ----------
 
@@ -90,7 +90,7 @@ It's very important to follow the right pin configuration to prevent damage to y
 Software Installation
 ---------------------
 
-**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports;
+**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and the **POWER button is pressed**;
 If you haven't, see the [Hardware Installation](#hardware-installation) section.
 
 This instructions are a *step-by-step guide* to install necessary software for your **Retroflag NESPi Front Panel Control Board**.
