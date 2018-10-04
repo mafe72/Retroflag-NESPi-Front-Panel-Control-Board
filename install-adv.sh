@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 #Step 1) Check if root--------------------------------------
 if [[ $EUID -ne 0 ]]; then
@@ -67,7 +67,7 @@ fi
 #-----------------------------------------------------------
 
 #Step 3) Update repository----------------------------------
-#sudo apt-get update -y
+sudo apt-get update -y
 #-----------------------------------------------------------
 
 #Step 4) Install gpiozero module----------------------------
