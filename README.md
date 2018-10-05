@@ -55,6 +55,17 @@ Top Side
 
 ----------
 
+YIKESHU Control Board
+--------
+
+Bottom Side:
+![Bottom Side](pictures/yikeshu-power-smd_back.png)
+
+Top Side
+![Top Side](pictures/yikeshu-power-smd_front.png)
+
+----------
+
 Prerequisites
 ---------------------
 
