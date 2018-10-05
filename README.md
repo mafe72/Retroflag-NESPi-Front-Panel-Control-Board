@@ -156,12 +156,10 @@ Basic Usage
 			Power will be disconnected from the Raspberry Pi after each shutdown (advance only)
 * RESET
 
-		While playing a game
-			Press RESET button to reboot current game
+		Function 1
+			Press button to restart EmulationStation
 			No change on LED status
 	
-* RESET
-	
-		While playing a game
-			Hold RESET button for 3 seconds to quit game back to EmulationStation
+		Function 2
+			Hold button for 3 seconds to reboot Console
 			LED will BLINK

@@ -63,10 +63,6 @@ def getCPUtemp():
 	res = os.popen('vcgencmd measure_temp').readline()
 	return (res.replace("temp=","").replace("'C\n",""))
 	
-def retroPiCmd(message):
-	sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	sock.sendto(message, ("127.0.0.1", 55355))
-
 while True:
 	#Power / LED Control
 	#When power button is unlatched turn off LED and initiate shutdown
@@ -81,15 +77,15 @@ while True:
 		led.on()  #Take control of LED instead of relying on TX pin
 		
 	#RESET Button pressed
-	#When Reset button is presed restart current game
+	#When Reset button is presed restart EmulationStation
 	if rebootBtn.is_pressed:
-		retroPiCmd("RESET")
+		os.system("systemctl restart autologin@tty1.service")
 
 	#RESET Button held
-	#When Reset button is held for more then 3 sec quit current game
+	#When Reset button is held for more then 3 sec reboot Console
 	if rebootBtn.is_held:
 		led.blink(.2,.2)
-		retroPiCmd("QUIT")
+		os.system("reboot")
 
 	#Fan control
 	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
