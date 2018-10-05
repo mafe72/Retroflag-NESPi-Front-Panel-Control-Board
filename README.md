@@ -174,3 +174,10 @@ Basic Usage
 		Function 2
 			Hold button for 3 seconds to reboot Console
 			LED will BLINK
+
+----------
+	
+Troubleshooting
+-----------
+
+If you experience under-voltage warnings use: [NorthPada Power Supply Adapter 5V 3A](https://amzn.to/2yijTcZ "NorthPada Power Supply Adapter 5V 3A").
