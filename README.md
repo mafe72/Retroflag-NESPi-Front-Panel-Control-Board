@@ -108,7 +108,7 @@ This instructions are a *step-by-step guide* to install necessary software for y
 You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
 
 ----------
-**NESPi Control Board**
+**NESPi & YIKESHU Control Board**
 
 Open your terminal and type the one-line installation command below:
 ```bash
