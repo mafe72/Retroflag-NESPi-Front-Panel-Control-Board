@@ -33,7 +33,18 @@ Features
 
 ----------
 
-NESPi Control Board
+NESPi Control Board TH
+--------
+
+Bottom Side:
+![CBottom Side](pictures/RetroflagNESPi-TH_Back.png)
+
+Top Side
+![Top Side](pictures/RetroflagNESPi-TH_Front.png)
+
+----------
+
+NESPi Control Board SMD
 --------
 
 Bottom Side:
@@ -44,7 +55,7 @@ Top Side
 
 ----------
 
-NESPi Advance Control Board
+NESPi Advance Control Board SMD
 --------
 
 Bottom Side:
@@ -55,7 +66,7 @@ Top Side
 
 ----------
 
-YIKESHU Control Board
+YIKESHU Control Board SMD
 --------
 
 Bottom Side:
