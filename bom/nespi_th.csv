@@ -1,0 +1,12 @@
+Component,MPN,References,Value,Quantity Per PCB,Datasheet
+1,1N4148,D2,1N4148,1,https://rocelec.widen.net/view/pdf/bhc41r7lwc/ONSM-S-A0003539415-1.pdf?t.download=true&u=5oefqw
+2,VAOL-3HAE4,D1,LED,1,http://static.vcclite.com/pdf/VAOL-3HAE4-LED-3mm-red.pdf
+3,68001-203HLF,J3,Control,1,https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/68000.pdf
+4,S2B-PH-KL(LF)(SN)-ND,J4,FAN,1,https://www.jst-mfg.com/product/pdf/eng/ePH.pdf
+5,68001-202HLF,J1,Power_IN,1,https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/68000.pdf
+6,68001-204HLF,J2,Power_OUT,1,https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/68000.pdf
+7,PN2222,Q1,PN2222 NPN,1,https://media.digikey.com/pdf/Data%20Sheets/ON%20Semiconductor%20PDFs/PN2222.pdf
+8,MFR-25FBF52-150R,R1,150ohm,1,https://www.yageo.com/upload/media/product/products/datasheet/lr/Yageo_LR_MFR_1.pdf
+9,MFR-25FBF52-2K2,R2,2K2,1,https://www.yageo.com/upload/media/product/products/datasheet/lr/Yageo_LR_MFR_1.pdf
+10,PBH2UEENAGX,SW1,PBH2UEENAGX,1,https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/52/PBH.pdf
+11,PBH2UOANAGX,SW2,PBH2UOANAGX,1,https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/52/PBH.pdf
