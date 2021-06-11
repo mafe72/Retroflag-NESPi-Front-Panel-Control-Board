@@ -123,7 +123,7 @@ You can setup this via SSH or using the command line interface in your RetroPie.
 
 Open your terminal and type the one-line installation command below:
 ```bash
-$ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install.sh" | sudo bash
+wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install.sh" | sudo bash
 ```
 
 ----------
@@ -131,7 +131,7 @@ $ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board
 
 Open your terminal and type the one-line installation command below:
 ```bash
-$ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install-adv.sh" | sudo bash
+wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/install-adv.sh" | sudo bash
 ```
 
 ----------
@@ -150,7 +150,7 @@ You can setup this via SSH or using the command line interface in your RetroPie.
 
 Open your terminal and type the one-line installation command below:
 ```bash
-$ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/uninstall.sh" | sudo bash
+wget -O - "https://github.com/mafe72/Retroflag-NESPi-Front-Panel-Control-Board/raw/master/uninstall.sh" | sudo bash
 ```
 
 The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **Retroflag NESPi Front Panel Control Board.**
