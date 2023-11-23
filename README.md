@@ -1,5 +1,8 @@
 Retroflag NESPi Front Panel Control Board
 ===============================
+
+![GitHub issues](https://img.shields.io/github/issues-raw/mafe72/Retroflag-NESPi-Front-Panel-Control-Board?logo=Github&style=for-the-badge)
+
 This is an enhancement board for the RetroFlag NESPi case, this PCB add missing functionality to the system.
 
 
